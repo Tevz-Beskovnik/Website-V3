@@ -1,0 +1,19 @@
+p {
+  margin: 10px 0 10px 15px;
+}
+
+.fn { color: rgb(255, 152, 50)}
+
+.fn-name { color: rgb(255, 255, 146)}
+
+.type { color: rgb(67, 202, 255)}
+
+.separator { color: rgb(188, 107, 46)}
+
+.string { color: rgb(66, 188, 103)}
+
+.arg { color: rgb(238, 207, 238) }
+
+.fn-time { color: rgb(255, 89, 77) }
+
+.unhighlight { color: gray }

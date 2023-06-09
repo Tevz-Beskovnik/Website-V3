@@ -1,0 +1,58 @@
+.main-title {
+    font-weight: 700;
+    font-size: 64px;
+    margin: 0 0 0 30px;
+}
+
+p {
+    margin: 10px 0 10px 15px;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    color: var(--secondary);
+}
+
+span {
+    color: white;
+}
+
+.fn { color: rgb(255, 152, 50)}
+
+.fn-name { color: rgb(255, 255, 146)}
+
+.type { color: rgb(67, 202, 255)}
+
+.separator { color: rgb(188, 107, 46)}
+
+.string { color: rgb(66, 188, 103)}
+
+.code-stack {
+    margin-left: 13px;
+}
+
+.main-container {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    height: calc(100% - 62px);
+}
+
+.main-contents {
+    padding-left: 15px;
+}
+
+.thid-tab {
+    max-width: 60%;
+}
+
+.fourth-tab {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    height: 90%;
+}
+
+.about-text {
+    font-size: larger;
+    color: var(--secondary);
+}

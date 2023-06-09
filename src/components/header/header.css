@@ -1,0 +1,65 @@
+header {
+    width: 100%;
+    position: fixed;
+    top: -70px;
+    transition: 0.5s;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    pointer-events: none; /* disables the hover on the .parent                 */
+}
+
+header:hover {
+    top: -50px;
+    transition: 0.5s;
+}
+
+.header-button {
+    height: 100px;
+    width: 50px;
+    transition: 0.5s;
+    border-radius: 50px;
+    background: var(--primary-bg);
+    border: none;
+    display:flex;
+    flex-flow: column;
+    align-items: center;
+    animation: Fade-in 0.5s;
+}
+
+header .header-button {
+    pointer-events: auto;
+}
+
+header .header-button:hover{
+    cursor: pointer;
+    width: 55px;
+    transition: 0.2s;    
+}
+
+.header-button:hover svg {
+    top: 48px;
+    width: 45px; 
+    height: 45px;
+    opacity: 1;
+    transition: 0.4s;
+}
+
+svg {
+    transform: rotate(180deg);
+    width: 40px; 
+    height: 40px;
+    position: relative;
+    top: 35px;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+@keyframes Fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

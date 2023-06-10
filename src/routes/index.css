@@ -16,43 +16,61 @@ span {
     color: white;
 }
 
-.fn { color: rgb(255, 152, 50)}
-
-.fn-name { color: rgb(255, 255, 146)}
-
-.type { color: rgb(67, 202, 255)}
-
-.separator { color: rgb(188, 107, 46)}
-
-.string { color: rgb(66, 188, 103)}
-
-.code-stack {
-    margin-left: 13px;
-}
-
 .main-container {
     display: flex;
     flex-flow: column;
     justify-content: center;
-    height: calc(100% - 62px);
+    height: calc(100% - 74px);
 }
 
 .main-contents {
     padding-left: 15px;
 }
 
-.thid-tab {
-    max-width: 60%;
+@media (min-width:320px)  { 
+    .main-title {
+        font-weight: 700;
+        font-size: 52px;
+        margin: 0 0 0 30px;
+    }
 }
 
-.fourth-tab {
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    height: 90%;
+@media (min-width:481px)  { 
+    .main-title {
+        font-weight: 700;
+        font-size: 52px;
+        margin: 0 0 0 30px;
+    }
 }
 
-.about-text {
-    font-size: larger;
-    color: var(--secondary);
+@media (min-width:641px)  { 
+    .main-title {
+        font-weight: 700;
+        font-size: 64px;
+        margin: 0 0 0 30px;
+    }
+}
+
+@media (min-width:961px)  { 
+    .main-title {
+        font-weight: 700;
+        font-size: 64px;
+        margin: 0 0 0 30px;
+    }
+}
+
+@media (min-width:1025px) { 
+    .main-title {
+        font-weight: 700;
+        font-size: 64px;
+        margin: 0 0 0 30px;
+    }
+}
+
+@media (min-width:1281px) { 
+    .main-title {
+        font-weight: 700;
+        font-size: 64px;
+        margin: 0 0 0 30px;
+    }
 }

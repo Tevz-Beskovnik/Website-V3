@@ -1,7 +1,5 @@
-import { component$, useStore, useStylesScoped$ } from "@builder.io/qwik";
+import { component$, useStylesScoped$ } from "@builder.io/qwik";
 import { DocumentHead } from "@builder.io/qwik-city";
-import Footer from "~/components/footer/footer";
-import Header from "~/components/header/header";
 import PageCard from "~/components/page-card/page-card";
 import TypingComponent from "~/components/typeing-component/typing-component";
 //import { Link } from '@builder.io/qwik-city';
@@ -9,37 +7,14 @@ import styles from "./index.css?inline";
 
 export default component$(() => {
   useStylesScoped$(styles);
-  const state = useStore({
-    position: 0,
-    activeTab: "rust",
-    activeSelection: "about",
-  });
 
   return (
-    <>
-      {state.position > 0 ? (
-        <Header
-          onClick$={() => {
-            state.position--;
-          }}
-        />
-      ) : null}
-      {state.position == 0 ? (
-        <PageCard background="./background.svg">
-          <div class="main-container">
-            <h1 class="main-title">Tevž Beškovnik</h1>
-            <TypingComponent text="Fullstack. Embeded systems. Computer graphics" />
-          </div>
-        </PageCard>
-      ) : state.position == 1 ? (
-        <PageCard background="./background-second.svg">
-          <div class="main-contents fourth-tab">
-            <h1>Want to get in touch?</h1>
-            <p class=""></p>
-          </div>
-        </PageCard>
-      ) : null}
-    </>
+    <PageCard>
+      <div class="main-container">
+        <h1 class="main-title">Tevž Beškovnik</h1>
+        <TypingComponent text="Fullstack. Embeded systems. Computer graphics" />
+      </div>
+    </PageCard>
   );
 });
 

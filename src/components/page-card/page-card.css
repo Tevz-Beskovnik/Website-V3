@@ -1,11 +1,13 @@
 .page-card {
     animation: fade-in 2s;
-    border-radius: 43px 43px 43px 43px;
+    border-radius: 43px;
     transition: 0.5s;
+    transform-style: preserve-3d;
     padding: 30px;
     margin: 20px;
     height: 100%;
     box-sizing: border-box;
+    background-image: url("./background.svg");
     background-color: var(--primary);
     background-size: contain;
     background-position: bottom right;
@@ -20,12 +22,127 @@
     font-size: 32px;
 }
 
+.page-footer {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
 .page-docs {
     font-weight: 600;
     font-size: 26px;
 }
 
+.icon-container {
+    margin: 2.5px 5px 2.5px 5px;
+    border-radius: 50%;
+    transition: 0.5s
+}
+
+svg {
+    width: 35px;
+    height: 35px;
+    transition: 0.5s;
+}
+
+svg:hover {
+    width: 40px;
+    height: 40px;
+    transition: 0.5s;
+}
+
+svg:focus {
+    width: 40px;
+    height: 40px;
+    transition: 0.5s;
+}
+
+.icon-container:hover .hover-color {
+    fill: var(--primary-bg);
+    transition: 0.5s;
+}
+
+.icon-container:focus .hover-color {
+    fill: var(--primary-bg);
+    transition: 0.5s;
+}
+
+.hover-color {
+    transition: 0.5s;
+}
+
+.icon-container:hover {
+    margin: 0 2.5px 0 2.5px;
+    cursor: pointer;
+}
+
+.icon-container:focus {
+    margin: 0 2.5px 0 2.5px;
+    cursor: pointer;
+}
+
 @keyframes fade-in {
-    0% { margin-top: -100vh; opacity: 0; }
-    100% { margin-bottom: 20px; opacity: 1;}
+    0% { 
+        margin-top: -100vh; 
+        opacity: 0;
+    }
+    100% { 
+        margin-bottom: 20px; 
+        opacity: 1;
+    }
+}
+
+@media (min-width:320px)  { 
+    .page-card {
+        background-image: url("./background-second.svg");
+        background-size: 30%;
+        background-position: bottom right;
+        background-repeat: no-repeat;
+    }    
+}
+
+@media (min-width:481px)  {  
+    .page-card {
+        background-image: url("./background-second.svg");
+        background-size: 30%;
+        background-position: bottom right;
+        background-repeat: no-repeat;
+    }    
+ }
+
+@media (min-width:641px)  { 
+    .page-card {
+        background-image: url("./background-second.svg");
+        background-size: 25%;
+        background-position: bottom right;
+        background-repeat: no-repeat;
+    }    
+ }
+
+@media (min-width:961px)  { 
+    .page-card {
+        background-image: url("./background.svg");
+        background-size: contain;
+        background-position: bottom right;
+        background-repeat: no-repeat;
+    }
+}
+
+@media (min-width:1025px) { 
+    .page-card {
+        background-image: url("./background.svg");
+        background-size: contain;
+        background-position: bottom right;
+        background-repeat: no-repeat;
+    }    
+}
+
+@media (min-width:1281px) { 
+    .page-card {
+        background-image: url("./background.svg");
+        background-size: contain;
+        background-position: bottom right;
+        background-repeat: no-repeat;
+    }
 }

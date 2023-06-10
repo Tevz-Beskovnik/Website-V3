@@ -19,25 +19,31 @@ export default component$((props: TypingComponentProps) => {
   });
 
   useClientEffect$(() => {
-    const interval = setInterval(() => {
-      if (state.count == props.text.length) {
-        setTimeout(() => {
-          state.add = false;
-        }, 2000);
-      } else if (state.count == 0) {
-        setTimeout(() => {
-          state.add = true;
-        }, 1500);
-      }
+    let interval: any;
+    setTimeout(() => {
+      // timeout on page reload
+      interval = setInterval(() => {
+        if (state.count == props.text.length) {
+          setTimeout(() => {
+            // timeout for end
+            state.add = false;
+          }, 2000);
+        } else if (state.count == 0) {
+          setTimeout(() => {
+            // timeout for start
+            state.add = true;
+          }, 1500);
+        }
 
-      if (state.count < props.text.length && state.add) {
-        state.typed += props.text[state.count];
-        state.count++;
-      } else if (state.count > 0 && !state.add) {
-        state.typed = state.typed.slice(0, -1);
-        state.count--;
-      }
-    }, 150);
+        if (state.count < props.text.length && state.add) {
+          state.typed += props.text[state.count];
+          state.count++;
+        } else if (state.count > 0 && !state.add) {
+          state.typed = state.typed.slice(0, -1);
+          state.count--;
+        }
+      }, 150);
+    }, 1000);
     return () => clearInterval(interval);
   });
 
